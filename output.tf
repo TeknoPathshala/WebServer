@@ -6,7 +6,7 @@ Create new file variables.tf with the content as below
 
 variable "region" {
 	description = " Define the AWS region "
-	default = "us-west-2"
+	default = "us-east-2"
 }
 variable "server_port" {
 	description = "http service listen"
@@ -21,13 +21,9 @@ variable "instance_type" {
 	description = "AWS ec2 instance type"
 	default="t2.micro"
 }
-variable "my_public_ip" {
-	description = "My laptop public IP ..." 
-        default = "116.110.26.150/32"
-}
 variable "ami" {
 description = "amazon machine image"
-default = "ami-0c2d06d50ce30b442"
+default = "ami-001089eb624938d9f"
 }
 
 variable "azs" {
