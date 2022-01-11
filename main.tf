@@ -1,4 +1,4 @@
-resource "aws_instance" "devopsroles-lab01" {
+resource "aws_instance" {
  count = 3
  ami = var.ami
  instance_type = var.instance_type
@@ -6,7 +6,7 @@ resource "aws_instance" "devopsroles-lab01" {
  tags = {
 	 Name = "DevopsRoles-${count.index}"
  }
- key_name = "terraform-demo"
+ key_name = "terra"
  user_data = <<EOF
 #!/bin/bash -xe
 exec > >(tee /var/log/user-data.log|logger -t user-data -s 2>/dev/console) 2>&1
